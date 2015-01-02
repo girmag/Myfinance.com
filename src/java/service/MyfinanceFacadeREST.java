@@ -39,7 +39,13 @@ public class MyfinanceFacadeREST extends AbstractFacade<Myfinance> {
     public void create(Myfinance entity) {
         super.create(entity);
     }
-
+    @POST
+    @Consumes({"application/xml", "application/json"})
+    public void saveFinanceData(Myfinance entity) {
+        
+        super.create(entity);
+        
+    }
     @PUT
     @Path("{id}")
     @Consumes({"application/xml", "application/json"})
